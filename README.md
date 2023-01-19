@@ -1,6 +1,8 @@
 # vscodium-remote_systemd
 Script and systemd unit files to launch Remote Execution Host for VSCodium on demand
 
+Inspired by [xaberus/vscode-remote-oss](https://github.com/xaberus/vscode-remote-oss)
+
 Features:
 * Launch Remote Execution Host on-demand
 * Shut down server after idle timeout
