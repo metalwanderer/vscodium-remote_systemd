@@ -1,0 +1,9 @@
+[Unit]
+Description=VSCodium Server service
+BindsTo=vscodium-proxy.service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=%h/bin/vscodium-server.sh
+ExecStopPost=rm -f %h/lib/vscodium-server/socket

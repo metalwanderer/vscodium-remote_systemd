@@ -1,0 +1,8 @@
+[Unit]
+Description=VSCodium Server socket
+
+[Socket]
+ListenStream=0.0.0.0:8000
+
+[Install]
+WantedBy=sockets.target

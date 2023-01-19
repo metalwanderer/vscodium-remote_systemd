@@ -1,0 +1,11 @@
+[Unit]
+Requires=vscodium-server.service
+After=vscodium-server.service
+Requires=vscodium-proxy.socket
+After=vscodium-proxy.socket
+
+[Service]
+Type=oneshot
+# timeout seems to cause unit to restart instead of fail
+ExecStart=/usr/bin/timeout 90 %h/lib/vscodium-server/bin/wait-socket.sh %h/lib/vscodium-server/socket
+ExecStart=/lib/systemd/systemd-socket-proxyd --exit-idle-time 900 %h/lib/vscodium-server/socket
