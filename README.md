@@ -7,6 +7,12 @@ Features:
 * Cleanup cached versions
 * Runs as user unit
 
+## Requirements
+* `bash`
+* `systemd`
+* `wget` (can be adjusted to use `curl`)
+* `jq`
+
 ## Usage
 ### Configure settings in `vscodium-server.sh`
 In particular, you may want to adjust the following:
